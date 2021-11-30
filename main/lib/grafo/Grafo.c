@@ -5,7 +5,7 @@
 #include "Grafo.h"
 
 #define MAIOR 99999
-#define MENOR -99999
+#define MESSAGE_PATH "\n\t> Calculando o caminho minimo...\n"
 
 void inicializaCaminho(grafo * g, int n, int origem);
 float pegaFloat();
@@ -106,6 +106,7 @@ void inicializaCaminho(grafo * g, int n, int origem){
 }
 
 void dijkstra(grafo * g, int origem, int destino, int n){
+    printf(MESSAGE_PATH);
     inicializaCaminho(g, n, origem);
     int proxRotulado; //Para armazenar o próximo nó rotulado;
     while(!g->noRotulado[destino]){ // Enquanto eu não rotular o nó destino eu continuo
@@ -119,11 +120,8 @@ void dijkstra(grafo * g, int origem, int destino, int n){
                     if(atual > 0){ //Se tiver caminho entre a linha e a coluna então entra no laço
                         int pAntigo = g->caminho[dest]->predecessor; // Armazeno o antigo predecessor
                         int aux = g->caminho[dest]->predecessor = orig; // variavel auxiliar para percorrer os predecessores
-                        printf("Predecessor: %d", g->caminho[dest]->predecessor);
-                        if(aux != -1){ //soma as distância do nó
-                                // predecessor
+                        if(aux != -1){ //soma as distância do nó predecessor
                             atual += g->caminho[aux]->dist;
-                            aux = g->caminho[aux]->predecessor;
                         }
 
                         float distDestino = g->caminho[dest]->dist; // Guardo a antiga distância do destino
@@ -151,19 +149,15 @@ void mostraCaminhoMinimo(grafo * g, int n){
     int i, j;
     printf("\nCaminho minimo de origem: 5");
     for(i = 0; i < n; i++){
-        printf("\nCODIGO %d:\nDISTANCIA: %.2f\nPREDECESSOR: %d\n", i+1, g->caminho[i]->dist, g->caminho[i]->predecessor + 1);
+        printf("\nCODIGO %d:\nDISTANCIA: %.2f\nPREDECESSOR: %d\n", i, g->caminho[i]->dist, g->caminho[i]->predecessor);
     }
 }
 
 void calculaCaminhoMinimoEntreNos(grafo * g, int n, int origem, int destino){
     mostraCaminhoMinimo(g, n);
     int atual = destino; // O valor do caminho é calculado acessado o nó de destino e somando as
-    //distâncias até os predecessores até chegar no nó de origem
-    float total = 0;
-    while(atual != origem){
-        total += g->caminho[atual]->dist;
-        atual = g->caminho[atual]->predecessor;
-    }
+    //distâncias dos predecessores até chegar no nó de origem
+    float total = g->caminho[atual]->dist;
     if(!total){
         printf("\nNAO HA CAMINHO!\n");
     }

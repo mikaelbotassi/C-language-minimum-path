@@ -10,7 +10,7 @@
 #define MESSAGE_CIDADES "\n\t> Armazenando Cidades...\n"
 #define MESSAGE_DISTANCIAS "\n\t> Armazenando Distancias...\n"
 #define MESSAGE_ESCREVENDO_ARQUIVO "\n\tAVISO: Escrevendo arquivo de saida, por favor aguarde...\n"
-#define DIRETORIO_ARQUIVO_ENTRADA "../entradas/entrada.txt"
+#define DIRETORIO_ARQUIVO_ENTRADA "../entradas/teste.txt"
 #define DIRETORIO_ARQUIVO_SAIDA "../saida/"
 #define LINE_MAX_LENGTH 255
 #define FILE_NAME_MAX_LENGTH 31

@@ -2,8 +2,6 @@
 // Created by mikae on 27/11/2021.
 //
 
-#define MESSAGE_AGM "\n\t> Calculando Arvore Geradora Minima...\n"
-
 #include "Controler.h"
 
 grafo * services(int * tamEntrada){
@@ -31,7 +29,19 @@ grafo * services(int * tamEntrada){
             }
             g = readGrafoFromFile(tamEntrada);
             // Para isso eu atribuo 1 para ele como um visitado
-            printf(MESSAGE_AGM);
+
+            printf("\nDESEJA PROCURAR O CAMINHO MINIMO ENTRE QUAIS VERTICES? DIGITE!\n");
+
+            printf("\n\tORIGEM: ");
+            scanf(" %d", &origem);
+
+            printf("\n\tDESTINO: ");
+            scanf(" %d", &destino);
+
+
+
+            dijkstra(g, origem, destino, *tamEntrada);
+
             break;
 
         case 2:
@@ -54,7 +64,7 @@ grafo * services(int * tamEntrada){
 
 
 
-            dijkstra(g, origem - 1, destino - 1, *tamEntrada);
+            dijkstra(g, origem, destino, *tamEntrada);
 
             break;
 
