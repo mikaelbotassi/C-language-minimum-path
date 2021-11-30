@@ -10,6 +10,7 @@
 typedef struct CaminhoMinimo{
     float dist;
     int predecessor;
+    int visitado;
 }caminhoMinimo;
 
 typedef struct Grafo{

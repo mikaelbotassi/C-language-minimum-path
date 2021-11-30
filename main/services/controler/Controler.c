@@ -30,17 +30,23 @@ grafo * services(int * tamEntrada){
             g = readGrafoFromFile(tamEntrada);
             // Para isso eu atribuo 1 para ele como um visitado
 
-            printf("\nDESEJA PROCURAR O CAMINHO MINIMO ENTRE QUAIS VERTICES? DIGITE!\n");
+            do{
+                printf("\nDIGITE A ORIGEM E O DESTINO QUE VOCE DESEJA SABER O CAMINHO MINIMO:\n");
 
-            printf("\n\tORIGEM: ");
-            scanf(" %d", &origem);
+                printf("\n\tORIGEM: ");
+                scanf(" %d", &origem);
 
-            printf("\n\tDESTINO: ");
-            scanf(" %d", &destino);
+                printf("\n\tDESTINO: ");
+                scanf(" %d", &destino);
 
+                dijkstra(g, origem, destino, *tamEntrada);
 
-
-            dijkstra(g, origem, destino, *tamEntrada);
+                printf("\nDESEJA PROCURAR O CAMINHO MINIMO ENTRE MAIS VERTICES?\n");
+                printf("1 - SIM\n");
+                printf("0 - NAO\n");
+                printf("DIGITE A OPCAO: ");
+                scanf(" %d", &res);
+            }while(res != 0);
 
             break;
 
@@ -54,13 +60,23 @@ grafo * services(int * tamEntrada){
 
             preenCheMatriz(g->matrizAdj, *tamEntrada, 1);//Atribui valores à matriz;
 
-            printf("\nDESEJA PROCURAR O CAMINHO MINIMO ENTRE QUAIS VERTICES? DIGITE!\n");
+            do{
+                printf("\nDIGITE A ORIGEM E O DESTINO QUE VOCE DESEJA SABER O CAMINHO MINIMO:\n");
 
-            printf("\n\tORIGEM: ");
-            scanf(" %d", &origem);
+                printf("\n\tORIGEM: ");
+                scanf(" %d", &origem);
 
-            printf("\n\tDESTINO: ");
-            scanf(" %d", &destino);
+                printf("\n\tDESTINO: ");
+                scanf(" %d", &destino);
+
+                dijkstra(g, origem, destino, *tamEntrada);
+
+                printf("\nDESEJA PROCURAR O CAMINHO MINIMO ENTRE MAIS VERTICES?\n");
+                printf("1 - SIM\n");
+                printf("0 - NAO\n");
+                printf("DIGITE A OPCAO: ");
+                scanf(" %d", &res);
+            }while(res != 0);
 
 
 
@@ -79,17 +95,23 @@ grafo * services(int * tamEntrada){
 
             preenCheMatriz(g->matrizAdj, *tamEntrada, 2);//Atribui valores à matriz;
 
-            printf("\nDESEJA PROCURAR O CAMINHO MINIMO ENTRE QUAIS VERTICES? DIGITE!\n");
+            do{
+                printf("\nDIGITE A ORIGEM E O DESTINO QUE VOCE DESEJA SABER O CAMINHO MINIMO:\n");
 
-            printf("\n\tORIGEM: ");
-            scanf(" %d", &origem);
+                printf("\n\tORIGEM: ");
+                scanf(" %d", &origem);
 
-            printf("\n\tDESTINO: ");
-            scanf(" %d", &destino);
+                printf("\n\tDESTINO: ");
+                scanf(" %d", &destino);
 
+                dijkstra(g, origem, destino, *tamEntrada);
 
-
-            dijkstra(g, origem, destino, *tamEntrada);
+                printf("\nDESEJA PROCURAR O CAMINHO MINIMO ENTRE MAIS VERTICES?\n");
+                printf("1 - SIM\n");
+                printf("0 - NAO\n");
+                printf("DIGITE A OPCAO: ");
+                scanf(" %d", &res);
+            }while(res != 0);
 
             break;
     }
