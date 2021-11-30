@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ProjetoDijkstra"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ProjetoDijkstra">
+				<Option output="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/ProjetoDijkstra.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/mikae/Downloads/Instaladores/MinGW/MingW 8.1.0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Users/mikae/Downloads/Instaladores/MinGW/MingW 8.1.0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Users/mikae/Downloads/Instaladores/MinGW/MingW 8.1.0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProjetoDijkstra"/>
+					<CompileFile command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ProjetoDijkstra/fast">
+				<Option output="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/ProjetoDijkstra.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/mikae/Downloads/Instaladores/MinGW/MingW 8.1.0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Users/mikae/Downloads/Instaladores/MinGW/MingW 8.1.0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Users/mikae/Downloads/Instaladores/MinGW/MingW 8.1.0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProjetoDijkstra/fast"/>
+					<CompileFile command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/mikae/DOWNLO~1/INSTAL~1/MinGW/MINGW8~1.0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/cidade/Cidade.c">
+			<Option target="ProjetoDijkstra"/>
+		</Unit>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/cidade/Cidade.h">
+			<Option target="ProjetoDijkstra"/>
+		</Unit>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/grafo/Grafo.c">
+			<Option target="ProjetoDijkstra"/>
+		</Unit>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/grafo/Grafo.h">
+			<Option target="ProjetoDijkstra"/>
+		</Unit>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/main.c">
+			<Option target="ProjetoDijkstra"/>
+		</Unit>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/controleEntradaSaida/ControleArquivo.c">
+			<Option target="ProjetoDijkstra"/>
+		</Unit>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/controleEntradaSaida/ControleArquivo.h">
+			<Option target="ProjetoDijkstra"/>
+		</Unit>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/controler/Controler.c">
+			<Option target="ProjetoDijkstra"/>
+		</Unit>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/controler/Controler.h">
+			<Option target="ProjetoDijkstra"/>
+		</Unit>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/geradorArquivo/GeradorArquivo.c">
+			<Option target="ProjetoDijkstra"/>
+		</Unit>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/geradorArquivo/GeradorArquivo.h">
+			<Option target="ProjetoDijkstra"/>
+		</Unit>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

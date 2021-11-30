@@ -1,0 +1,3 @@
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/CMakeFiles/ProjetoDijkstra.dir
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug/CMakeFiles/rebuild_cache.dir

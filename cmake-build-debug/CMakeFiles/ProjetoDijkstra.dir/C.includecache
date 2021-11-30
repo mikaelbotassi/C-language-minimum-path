@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/cidade/Cidade.h
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+string.h
+-
+
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/grafo/Grafo.c
+Grafo.h
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/grafo/Grafo.h
+
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/grafo/Grafo.h
+../../lib/cidade/Cidade.h
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/cidade/Cidade.h
+

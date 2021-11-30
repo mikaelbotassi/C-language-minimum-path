@@ -1,0 +1,10 @@
+ORIGEM:[0, Piqahumoaya], DESTINO:[1, Nefexairevu], DISTANCIA: 27.47
+ORIGEM:[0, Piqahumoaya], DESTINO:[4, Tujeropugir], DISTANCIA: 26.32
+ORIGEM:[0, Piqahumoaya], DESTINO:[6, Siyoqaevake], DISTANCIA: 20.81
+ORIGEM:[0, Piqahumoaya], DESTINO:[9, Fotusuyisoa], DISTANCIA: 41.68
+ORIGEM:[2, Cogibekaned], DESTINO:[8, Vosuenikocu], DISTANCIA: 22.54
+ORIGEM:[3, Uxifufuzeso], DESTINO:[4, Tujeropugir], DISTANCIA: 18.82
+ORIGEM:[5, Poruyetawoy], DESTINO:[9, Fotusuyisoa], DISTANCIA: 19.80
+ORIGEM:[6, Siyoqaevake], DESTINO:[7, Fomunumekes], DISTANCIA: 12.58
+ORIGEM:[7, Fomunumekes], DESTINO:[8, Vosuenikocu], DISTANCIA: 23.60
+DISTANCIA TOTAL ASFALTADA = 213.62
