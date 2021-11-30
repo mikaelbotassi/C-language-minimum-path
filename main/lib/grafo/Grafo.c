@@ -120,10 +120,6 @@ void dijkstra(grafo * g, int origem, int destino, int n){
                         int pAntigo = g->caminho[dest]->predecessor; // Armazeno o antigo predecessor
                         int aux = g->caminho[dest]->predecessor = orig; // variavel auxiliar para percorrer os predecessores
                         printf("Predecessor: %d", g->caminho[dest]->predecessor);
-                        /*while (aux != -1) { // Laço que  até que não haja mais nenhum outro nó predecessor.
-                            atual += g->caminho[aux]->dist;
-                            aux = g->caminho[aux]->predecessor;
-                        }*/
                         if(aux != -1){ //soma as distância do nó
                                 // predecessor
                             atual += g->caminho[aux]->dist;
