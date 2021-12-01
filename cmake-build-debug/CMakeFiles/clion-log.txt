@@ -1,4 +1,4 @@
-C:\Users\mikae\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5457.51\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\Algoritmo de Dijkstra\ProjetoDijkstra"
+C:\Users\mikae\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.5744.254\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\Algoritmo de Dijkstra\ProjetoDijkstra"
 -- Configuring done
 -- Generating done
 -- Build files have been written to: C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/cmake-build-debug

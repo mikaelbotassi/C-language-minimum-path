@@ -31,6 +31,9 @@ grafo * services(int * tamEntrada){
             // Para isso eu atribuo 1 para ele como um visitado
 
             do{
+
+                mostraMatriz(g->matrizAdj, *tamEntrada, "matriz Adj");
+
                 printf("\nDIGITE A ORIGEM E O DESTINO QUE VOCE DESEJA SABER O CAMINHO MINIMO:\n");
 
                 printf("\n\tORIGEM: ");
@@ -41,11 +44,14 @@ grafo * services(int * tamEntrada){
 
                 dijkstra(g, origem, destino, *tamEntrada);
 
+                calculaCaminhoMinimoEntreNos(g, *tamEntrada, origem, destino);
+
                 printf("\nDESEJA PROCURAR O CAMINHO MINIMO ENTRE MAIS VERTICES?\n");
                 printf("1 - SIM\n");
                 printf("0 - NAO\n");
                 printf("DIGITE A OPCAO: ");
                 scanf(" %d", &res);
+                //desalocarDijkstra(g);
             }while(res != 0);
 
             break;

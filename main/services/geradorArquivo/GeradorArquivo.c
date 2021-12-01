@@ -3,7 +3,7 @@
 //
 
 #include "GeradorArquivo.h"
-#define QTD_CID 10
+#define QTD_CID 9
 #define MESSAGE_GERANDO_ARQUIVO "\n\tAVISO: Gerando arquivo de entrada, por favor aguarde...\n"
 #define DIRETORIO_ARQUIVO "../entradas/entrada.txt"
 

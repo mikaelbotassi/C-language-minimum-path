@@ -1,3 +1,3 @@
-C:\Users\mikae\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5457.51\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\ProjetoDijkstra.dir/objects.a
-C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\ar.exe cr CMakeFiles\ProjetoDijkstra.dir/objects.a @CMakeFiles\ProjetoDijkstra.dir\objects1.rsp
+C:\Users\mikae\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.5744.254\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\ProjetoDijkstra.dir/objects.a
+C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\ar.exe qc CMakeFiles\ProjetoDijkstra.dir/objects.a @CMakeFiles\ProjetoDijkstra.dir\objects1.rsp
 C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\ProjetoDijkstra.dir/objects.a -Wl,--no-whole-archive -o ProjetoDijkstra.exe -Wl,--out-implib,libProjetoDijkstra.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ProjetoDijkstra.dir\linklibs.rsp

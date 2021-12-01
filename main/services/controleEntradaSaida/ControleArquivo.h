@@ -9,7 +9,5 @@
 
 grafo * readGrafoFromFile(int * tamEntrada);
 
-void writeGrafoOnFile(grafo * fork, int quantCidades);
-
 
 #endif //_CONTROLEARQUIVOALUNO_H

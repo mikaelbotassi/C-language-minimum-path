@@ -4,30 +4,38 @@
 
 #include "Grafo.h"
 
-#define MAIOR 99999
+#define INFINITO 99999999
 #define MESSAGE_PATH "\n\t> Calculando o caminho minimo...\n"
 
 //------------------ FUNÇÕES PRIVADAS --------------------------------
 void inicializaCaminho(grafo * g, int n, int origem);
 float pegaFloat();
-void mostraCaminhoMinimo(grafo * g, int n);
-int temCaminho(float * vetorAdj, int n);
+void mostraCaminhoMinimo(grafo * g, int origem, int n);
+int temCaminho(float * vetorAdj, int * rotulados, int n);
+void zeraCaminho(caminhoMinimo * cm, int n);
+void atribuiValorVetor(int * vetor, int n, int valor);
 //--------------------------------------------------------------------
 
 grafo * newGrafo(int tamEntrada){
     grafo * g = malloc(sizeof (grafo));
     g->cidades = newVetorCidade(tamEntrada);
-    g->noRotulado = newVetor(tamEntrada);
+    g->caminho = newCaminho(tamEntrada);
+    g->rotulados = newVetor(tamEntrada);
     g->matrizAdj = newMatriz(tamEntrada);
     return g;
 }
 
 int * newVetor(int n){
-    int * new = malloc(n*sizeof (int));
-    for(int i = 0; i < n; i++){
-        new[i] = 0;
-    }
+    int * new = (int *) malloc(n * sizeof (int));
+    atribuiValorVetor(new, n, 0);
     return new;
+}
+
+void atribuiValorVetor(int * vetor, int n, int valor){
+    int i;
+    for(i = 0; i < n; i++){
+        vetor[i] = valor;
+    }
 }
 
 float ** newMatriz(int n){
@@ -46,7 +54,6 @@ float pegaFloat(){
 }
 
 void preenCheMatriz(float **matriz, int n, int type){
-    int caractere = 65;
     for (int i = 0; i < n; ++i) {
         for(int j = 0; j < n; j++){
             if(i == j){
@@ -83,36 +90,39 @@ void mostraMatriz(float ** f, int n, char nome[]){
     for (int i = 0; i < n; ++i) {
         printf("\n%c ", caractere + i);
         for(int j = 0; j < n; j++){
-            printf("\t%.1f ", f[i][j]);
+            printf("\t%.2f ", f[i][j]);
         }
     }
 }
 
-caminhoMinimo ** newCaminho(int n){
-    caminhoMinimo ** new = (caminhoMinimo **) malloc(n * sizeof (caminhoMinimo *));
+caminhoMinimo * newCaminho(int n){
+    caminhoMinimo * new = (caminhoMinimo *) malloc(n * sizeof (caminhoMinimo));
     int i;
-    for(i = 0; i < n; i++){
-        caminhoMinimo * caminho = malloc(sizeof * (caminho));
-        caminho->dist = MAIOR;
-        caminho->predecessor = 0;
-        caminho->visitado = 0;
-        new[i] = caminho;
-    }
+    zeraCaminho(new, n);
     return new;
 }
 
-void inicializaCaminho(grafo * g, int n, int origem){
-    g->noRotulado = newVetor(n);
-    g->noRotulado[origem] = 1; //Defino a posição de origem como rotulada e é de la que irei começar
-    g->caminho = newCaminho(n);
-    g->caminho[origem]->predecessor = -1; //Defino que não tem predecessor
-    g->caminho[origem]->dist = 0; //Defino a distância dele com ele mesmo como 0
+void zeraCaminho(caminhoMinimo * cm, int n){
+    int i;
+    for(i = 0; i < n; i++){
+        cm[i].dist = INFINITO;
+        cm[i].predecessor = -1;
+    }
 }
 
-int temCaminho(float * vetorAdj, int n){
+void inicializaCaminho(grafo * g, int n, int origem){
+    zeraCaminho(g->caminho, n);
+    atribuiValorVetor(g->rotulados, n, 0);
+    g->caminho[origem].predecessor = INFINITO; //Defino o primeiro nó
+    g->caminho[origem].dist = 0; //Defino a distância dele com ele mesmo como 0
+    g->rotulados[origem] = 1; //Se for 1 é no rotulado atual;
+}
+
+int temCaminho(float * vetorAdj, int * rotulados, int n){ // Função que verifica se uma linha tem caminho para o qual seguir
+    //Ou seja, se a linha pode ir para algum outro vértice do grafo ainda não rotulado
     int i;
     for (i = 0; i < n; ++i) {
-        if(vetorAdj[i] != 0){
+        if(vetorAdj[i] != 0 && !(rotulados[i])){
             return 1;
         }
     }
@@ -122,65 +132,76 @@ int temCaminho(float * vetorAdj, int n){
 void dijkstra(grafo * g, int origem, int destino, int n){
     printf(MESSAGE_PATH);
     inicializaCaminho(g, n, origem);
-    int possuiCaminho = 1;
-    int proxRotulado; //Para armazenar o próximo nó rotulado;
-    while(!g->noRotulado[destino] && possuiCaminho == 1){ // Enquanto eu não rotular o nó destino eu continuo
+    int proxRotulo;
+    while(!(g->rotulados[destino])){ // Enquanto eu não rotular o nó destino eu continuo
         int orig;
         for(orig = 0; orig < n; orig++){ //For para percorrer as linhas
-            if(g->noRotulado[orig] && !(g->caminho[orig]->visitado)){ //Se a linha for um nó rotulado então entra
-                possuiCaminho = temCaminho(g->matrizAdj[orig], n);
+            if(g->rotulados[orig]){ //Se a linha for um nó rotulado então entra
 
-                if(possuiCaminho){
+                if(temCaminho(g->matrizAdj[orig], g->rotulados,n)){
                     int dest;
-                    float menor = MAIOR;
+                    float menor = INFINITO;
                     for(dest = 0; dest < n; dest++){ //For para percorrer as colunas
                         float atual = g->matrizAdj[orig][dest]; //Pego a distância atual
                         if(atual > 0){ //Se tiver caminho entre a linha e a coluna então entra no laço
-                            int pAntigo = g->caminho[dest]->predecessor; // Armazeno o antigo predecessor
-                            g->caminho[dest]->predecessor = orig; // variavel auxiliar para percorrer os predecessores
-                            //soma as distância do nó predecessor
-                            atual += g->caminho[orig]->dist;
+                            if(g->caminho[orig].dist != INFINITO){
+                                atual += g->caminho[orig].dist;
+                            }
+                            if(atual < g->caminho[dest].dist){
+                                g->caminho[dest].dist = atual; //Atribuo a distancia entre o predecessor e o destino
+                                g->caminho[dest].predecessor = orig;
+                            }
 
-                            float distDestino = g->caminho[dest]->dist; // Guardo a antiga distância do destino
-                            if(distDestino > atual){
-                                g->caminho[dest]->dist = atual; //Atribuo a distancia entre o predecessor e o destino
-                                g->caminho[dest]->predecessor = orig;
-                            }
-                            else{
-                                g->caminho[dest]->predecessor = pAntigo;
-                            }
-                            if(atual < menor){
+                            if(atual < menor && g->rotulados[dest] == 0){
+                                proxRotulo = dest;
                                 menor = atual;
-                                proxRotulado = dest;
                             }
                         }
                     }
-                    g->noRotulado[proxRotulado] = 1;
-                    g->caminho[orig]->visitado = 1;
+                }
+                else{
+                    g->rotulados[orig] = -1; //Se nao tiver como ir desse ponto para outro, apenas rotula ele e sai
+                    return;
                 }
             }
         }
+        g->rotulados[proxRotulo] = 1; //Proximo nó a ser rotulado
+        g->rotulados[orig] = -1; //Já foi rotulado
     }
-    calculaCaminhoMinimoEntreNos(g, n, origem, destino);
 }
 
-void mostraCaminhoMinimo(grafo * g, int n){
-    int i, j;
-    printf("\nCaminho minimo de origem: 5");
+void mostraCaminhoMinimo(grafo * g, int origem, int n){
+    int i;
+    printf("\n\nCAMINHO MINIMO DA ORIGEM %d\n", origem);
     for(i = 0; i < n; i++){
-        printf("\nCODIGO %d:\nDISTANCIA: %.2f\nPREDECESSOR: %d\n", i, g->caminho[i]->dist, g->caminho[i]->predecessor);
+        printf("\nCODIGO %d:[DIST: %.2f, PRED: %d]", i, g->caminho[i].dist, g->caminho[i].predecessor);
     }
 }
 
 void calculaCaminhoMinimoEntreNos(grafo * g, int n, int origem, int destino){
-    mostraCaminhoMinimo(g, n);
-    int atual = destino; // O valor do caminho é calculado acessado o nó de destino e somando as
+    mostraCaminhoMinimo(g, origem, n);
+    int atual = destino;// O valor do caminho é calculado acessado o nó de destino e somando as
     //distâncias dos predecessores até chegar no nó de origem
-    float total = g->caminho[atual]->dist;
-    if(total == MAIOR){
+    //int * emOrdem = newVetor(n, 0);//variável para imprimir o caminho em ordem
+    int emOrdem[n];
+    int j, cont = 0;
+    float total = g->caminho[destino].dist;
+    if(total == INFINITO){
         printf("\nNAO HA CAMINHO!\n");
     }
     else{
+        while(atual != -1 && atual != INFINITO && cont < n){
+            emOrdem[cont] = atual;
+            atual = g->caminho[atual].predecessor;
+            cont++;
+        }
+        printf("\nCAMINHO = {");
+        cont--;
+        for(j = cont; j >= 0; j--){
+            int vertice = emOrdem[j];
+               printf(" %d ", vertice);
+        }
+        printf("}\n");
         printf("\nO CAMINHO MINIMO E: %.2f\n", total);
     }
 }

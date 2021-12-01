@@ -16,9 +16,17 @@ time.h
 string.h
 -
 
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/grafo/Grafo.c
+Grafo.h
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/grafo/Grafo.h
+
 C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/grafo/Grafo.h
 ../../lib/cidade/Cidade.h
 C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/cidade/Cidade.h
+
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/controleEntradaSaida/ControleArquivo.c
+ControleArquivo.h
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/controleEntradaSaida/ControleArquivo.h
 
 C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/controleEntradaSaida/ControleArquivo.h
 stdio.h
@@ -27,20 +35,6 @@ stdlib.h
 -
 string.h
 -
-../../lib/grafo/Grafo.h
-C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/grafo/Grafo.h
-
-C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/controler/Controler.c
-Controler.h
-C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/controler/Controler.h
-
-C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/controler/Controler.h
-../geradorArquivo/GeradorArquivo.h
-C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/geradorArquivo/GeradorArquivo.h
-../controleEntradaSaida/ControleArquivo.h
-C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/controleEntradaSaida/ControleArquivo.h
-
-C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/services/geradorArquivo/GeradorArquivo.h
 ../../lib/grafo/Grafo.h
 C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Algoritmo de Dijkstra/ProjetoDijkstra/main/lib/grafo/Grafo.h
 

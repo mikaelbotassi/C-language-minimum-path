@@ -10,10 +10,6 @@ int main() {
 //================Estruturas==============================
     grafo * g = services(&tamEntrada);
 //========================================================
-    if(g != NULL){
-        mostraMatriz(g->matrizAdj, tamEntrada, "MATRIZ ADJACENTE");
-        //writeGrafoOnFile(g, tamEntrada);
-    }
 
     return 0;
 }

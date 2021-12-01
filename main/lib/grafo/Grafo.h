@@ -10,14 +10,13 @@
 typedef struct CaminhoMinimo{
     float dist;
     int predecessor;
-    int visitado;
 }caminhoMinimo;
 
 typedef struct Grafo{
     cidade ** cidades;
-    int * noRotulado;
     float ** matrizAdj;
-    caminhoMinimo ** caminho;
+    caminhoMinimo * caminho;
+    int * rotulados;
 }grafo;
 
 grafo * newGrafo(int tamEntrada);
@@ -28,7 +27,7 @@ float ** newMatriz(int n);
 
 void preenCheMatriz(float **matriz, int n, int type);
 
-caminhoMinimo ** newCaminho(int n);
+caminhoMinimo * newCaminho(int n);
 
 void mostraMatriz(float ** f, int n, char nome[]);
 
